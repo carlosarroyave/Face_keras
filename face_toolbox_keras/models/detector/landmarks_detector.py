@@ -23,7 +23,7 @@ class FANLandmarksDetector(BaseLandmarksDetector):
         else:
             self.net = tf.keras.models.load_model("./face_toolbox_keras/models/detector/FAN/2DFAN-4_keras.h5")
         print(self.net.get_layer(index=0))
-        self.net.summary()
+        #self.net.summary()
 
     def detect_landmarks(self, image, bounding_box=None, face_detector=None):
         if (bounding_box is None) and (face_detector is None):

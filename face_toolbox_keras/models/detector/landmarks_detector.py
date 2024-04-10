@@ -21,7 +21,6 @@ class FANLandmarksDetector(BaseLandmarksDetector):
         if not tf.__version__ >= '1.13':
             self.net = load_model(path_to_weights_file)
         else:
-            
             self.net = tf.keras.models.load_model("./models/detector/FAN/2DFAN-4_keras.h5")
         print(self.net.get_layer(index=0))
         self.net.summary()
